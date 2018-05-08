@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pga.ptcl.ptcl_videoplayapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ptcllogo"
+        android:label="Digital Learning Application"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".DigitalLearningAppActivity"
+            android:label="Digital Learning Application" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="Digital Learning Application" />
+        <activity
+            android:name=".Main2Activity"
+            android:configChanges="orientation|screenSize"
+            android:label="Digital Learning Application" />
+        <activity
+            android:name=".activity_VideosList"
+            android:label="Digital Learning Application" />
+    </application>
+
+</manifest>
