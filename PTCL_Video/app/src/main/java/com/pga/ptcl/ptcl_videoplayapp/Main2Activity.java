@@ -29,7 +29,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void videoplay(View v) {
-        String fileName = "ptclvideo";
+        String fileName = "ai";
 
         String file = "android.resource://" + getPackageName() + "/raw/" + fileName;
         VideoView videoView = findViewById(R.id.SampleVideoView2);

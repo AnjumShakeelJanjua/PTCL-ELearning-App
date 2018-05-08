@@ -34,6 +34,7 @@ public class DigitalLearningAppActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
+                intent.putExtra("FileNameBtn","ptclvideo");
                 startActivity(intent);
             }
         });
@@ -41,8 +42,9 @@ public class DigitalLearningAppActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
+                intent.putExtra("FileNameBtn","ai");
                 startActivity(intent);
             }
         });
