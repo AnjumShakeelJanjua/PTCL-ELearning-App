@@ -13,10 +13,6 @@ public class DigitalLearningAppActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setLogo(R.drawable.ptcllogo);
-//        getSupportActionBar().setDisplayUseLogoEnabled(true);
-//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.argb(255, 0, 0, 1)));
 
         setContentView(R.layout.digitallearningapp);
 
@@ -34,6 +30,7 @@ public class DigitalLearningAppActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
+                intent.putExtra("FileNameBtn","ptclvideo");
                 startActivity(intent);
             }
         });
@@ -41,8 +38,9 @@ public class DigitalLearningAppActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main2Activity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
+                intent.putExtra("FileNameBtn","ai");
                 startActivity(intent);
             }
         });

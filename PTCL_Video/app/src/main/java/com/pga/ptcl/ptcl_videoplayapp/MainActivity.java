@@ -1,5 +1,6 @@
 package com.pga.ptcl.ptcl_videoplayapp;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -18,10 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        getSupportActionBar().setDisplayShowHomeEnabled(true);
-//        getSupportActionBar().setLogo(R.drawable.ptcllogo);
-//        getSupportActionBar().setDisplayUseLogoEnabled(true);
-//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.argb(255,0,0,1)));
         setContentView(R.layout.activity_main);
 
         mediaController = new MediaController(this);
@@ -29,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void videoplay(View v) {
-        String fileName = "ptclvideo";
+        Intent intent = getIntent();
+
+        String fileName = intent.getStringExtra("FileNameBtn");
 
         String file = "android.resource://" + getPackageName() + "/raw/" + fileName;
         VideoView videoView = findViewById(R.id.SampleVideoView);
