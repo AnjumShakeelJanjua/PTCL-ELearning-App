@@ -7,17 +7,25 @@ import android.support.v7.widget.RecyclerView;
 
 public class activity_VideosList extends AppCompatActivity {
 
+    String[] elements = {"First", "Second", "Third", "Fourth", "Fifth", "C#", "JavaScript"};
+    private int[] listImages = {R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4, R.drawable.pic5, R.drawable.pic6, R.drawable.pic7};
+
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.videoslist);
 
-        String[] elements = {"First", "Second", "Third", "Fourth", "Fifth", "C#", "JavaScript", "Me Buu", "Kill You!", "The End Folks!"};
+        layoutManager = new LinearLayoutManager(this);
 
-        RecyclerView programmingList = findViewById(R.id.ProgrammingList);
-        programmingList.setLayoutManager(new LinearLayoutManager(this));
-        programmingList.setAdapter(new ProgrammingAdapter(elements));
+        recyclerView = findViewById(R.id.ProgrammingList);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(new ProgrammingAdapter(elements, listImages,this));
+
     }
 }
+

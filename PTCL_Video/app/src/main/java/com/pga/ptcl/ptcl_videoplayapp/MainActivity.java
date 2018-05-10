@@ -28,17 +28,15 @@ public class MainActivity extends AppCompatActivity {
     public void videoplay(View v) {
         Intent intent = getIntent();
 
-        String fileName = intent.getStringExtra("FileNameBtn");
-
+        String fileName = intent.getStringExtra("VideoName");
         String file = "android.resource://" + getPackageName() + "/raw/" + fileName;
+
         VideoView videoView = findViewById(R.id.SampleVideoView);
 
         videoView.setVideoURI(Uri.parse(file));
         videoView.setMediaController(mediaController);
-
         mediaController.setAnchorView(videoView);
 
         videoView.start();
     }
-
 }
