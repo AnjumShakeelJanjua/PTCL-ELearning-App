@@ -20,30 +20,8 @@ public class DigitalLearningAppActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
         final Toast toast = Toast.makeText(getApplicationContext(), text, duration);
 
-        Button btn = findViewById(R.id.imgBtn1);
-        Button btn2 = findViewById(R.id.imgBtn2);
         Button btn3 = findViewById(R.id.imgBtn3);
         Button btn4 = findViewById(R.id.imgBtn4);
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-
-                intent.putExtra("FileNameBtn","ptclvideo");
-                startActivity(intent);
-            }
-        });
-
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-
-                intent.putExtra("FileNameBtn","ai");
-                startActivity(intent);
-            }
-        });
 
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
