@@ -87,15 +87,16 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
         @Override
         public void onClick(View v) {
 
-            int adapPos = getAdapterPosition() + 1;
-            if (row_index == adapPos) {
+            int adapPos = getAdapterPosition();
+            if (row_index == 1 + adapPos) {
                 this.videoLinearLayout.setBackgroundColor(Color.parseColor("#bdbdbd"));
             } else
                 this.videoLinearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
 
             Intent intent = new Intent(context, MainActivity.class);
 
-            intent.putExtra("VideoName", "ptclvideo" + String.valueOf(1 + getAdapterPosition()));
+            intent.putExtra("AdapterId", adapPos);
+            intent.putExtra("VideoName", "ptclvideo" + String.valueOf(adapPos));
 
             context.startActivity(intent);
         }
