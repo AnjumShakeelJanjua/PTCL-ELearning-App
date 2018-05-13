@@ -1,6 +1,7 @@
 package com.pga.ptcl.ptcl_videoplayapp;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         String file = "android.resource://" + getPackageName() + "/raw/" + fileName;
 
         //Casting the View v to VideoView vid to access VideoView specific methods
-        VideoView vid = (VideoView) v;
+        final VideoView vid = (VideoView) v;
 
         vid.setVideoURI(Uri.parse(file));
         vid.setMediaController(mediaController);
@@ -55,17 +56,35 @@ public class MainActivity extends AppCompatActivity {
 
         vid.start();
 
+        vid.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+//                vid.stopPlayback();
+                if (currentVideoIndex == videoNames.size() - 1)
+                    currentVideoIndex = 0;
+                else if (currentVideoIndex < videoNames.size())
+                    currentVideoIndex++;
+
+                Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + videoNames.get(currentVideoIndex));
+                vid.setVideoURI(videoUri);
+                vid.start();
+            }
+        });
+
         ShowMediaControllerControls();
     }
+
 
     //Method responsible for next and previous controls
     public void ShowMediaControllerControls() {
         mediaController.setPrevNextListeners(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (currentVideoIndex < videoNames.size())
+                if (currentVideoIndex == videoNames.size() - 1) {
+                    currentVideoIndex = 0;
+                } else if (currentVideoIndex < videoNames.size())
                     currentVideoIndex++;
+
                 Uri fileThis = Uri.parse("android.resource://" + getPackageName() + "/raw/" + videoNames.get(currentVideoIndex));
                 vv.setVideoURI(fileThis);
                 vv.start();
@@ -73,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         }, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (currentVideoIndex < videoNames.size())
+                if (currentVideoIndex < 0 && currentVideoIndex < videoNames.size())
                     currentVideoIndex--;
                 Uri fileThis = Uri.parse("android.resource://" + getPackageName() + "/raw/" + videoNames.get(currentVideoIndex));
                 vv.setVideoURI(fileThis);

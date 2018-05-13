@@ -42,18 +42,6 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
         holder.videoText.setText(title);
         holder.videoImage.setImageResource(image_Id);
 
-//        holder.videoLinearLayout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                row_index = position;
-//                notifyDataSetChanged();
-//            }
-//        });
-//
-//        if (row_index == position) {
-//            holder.videoLinearLayout.setBackgroundColor(Color.parseColor("#bdbdbd"));
-//        } else
-//            holder.videoLinearLayout.setBackgroundColor(Color.parseColor("#ffffff"));
     }
 
     @Override

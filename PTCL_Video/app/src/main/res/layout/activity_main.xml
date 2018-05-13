@@ -4,13 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/background_dark"
-    android:gravity="center_vertical"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <include
-        android:id="@+id/app_actionBar"
-        layout="@layout/app_actionbar" />
 
     <VideoView
         android:id="@+id/SampleVideoView"
@@ -20,4 +15,5 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true" />
+
 </RelativeLayout>
