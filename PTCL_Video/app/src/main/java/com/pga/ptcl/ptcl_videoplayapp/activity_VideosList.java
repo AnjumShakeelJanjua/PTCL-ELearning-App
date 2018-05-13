@@ -19,12 +19,13 @@ public class activity_VideosList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.videoslist);
 
+//        layoutManager = new GridLayoutManager(this, 2);
         layoutManager = new LinearLayoutManager(this);
 
         recyclerView = findViewById(R.id.ProgrammingList);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new ProgrammingAdapter(elements, listImages,this));
+        recyclerView.setAdapter(new ProgrammingAdapter(elements, listImages, this));
 
     }
 }
