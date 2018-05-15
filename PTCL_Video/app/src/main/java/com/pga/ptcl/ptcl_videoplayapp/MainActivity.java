@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     final List<String> videoNames = new ArrayList<>();
     VideoView vv;
     MediaController mediaController;
+    LinearLayout videoLinearLayout;
 
     int currentVideoIndex;
 
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         vid.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-//                vid.stopPlayback();
+                vid.stopPlayback();
                 if (currentVideoIndex == videoNames.size() - 1)
                     currentVideoIndex = 0;
                 else if (currentVideoIndex < videoNames.size())

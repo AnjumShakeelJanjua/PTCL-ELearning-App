@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView;
 
 public class activity_VideosList extends AppCompatActivity {
 
-    String[] elements = {"First", "Second", "Third", "Fourth", "Fifth", "C#", "JavaScript"};
-    private int[] listImages = {R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable.pic4, R.drawable.pic5, R.drawable.pic6, R.drawable.pic7};
+    String[] elements;
+    private int[] listImages = {R.drawable.video1pic, R.drawable.video2pic, R.drawable.video3pic, R.drawable.video45pic, R.drawable.video45pic, R.drawable.video6pic, R.drawable.video7pic, R.drawable.video8pic};
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
@@ -19,8 +19,8 @@ public class activity_VideosList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.videoslist);
 
-//        layoutManager = new GridLayoutManager(this, 2);
         layoutManager = new LinearLayoutManager(this);
+        elements = getResources().getStringArray(R.array.videoTitles);
 
         recyclerView = findViewById(R.id.ProgrammingList);
         recyclerView.setLayoutManager(layoutManager);

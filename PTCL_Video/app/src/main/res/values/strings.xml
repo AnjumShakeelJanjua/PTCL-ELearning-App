@@ -3,4 +3,14 @@
     <string name="title_activity_welcome_layout">WelcomeLayout</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="health_and_safety_guidelines">Health and Safety Guidelines</string>
+    <string-array name="videoTitles">
+        <item>ہائی ٹینشن ٹرانسمشن لائنز</item>
+        <item>منظور شدہ لباس</item>
+        <item>اوزار اور انسولیٹڈ سیڑھی</item>
+        <item>  کھمبوں کی حفاظتی پیش بندی</item>
+        <item>بجلی کی فراہمی کے لیے کھمبے</item>
+        <item>کھمبے پر کام کے لیے سیڑھی</item>
+        <item>ڈرائیونگ / سڑک پر حفاظت</item>
+        <item>سیڑھی کے بارے میں حفاظت</item>
+    </string-array>
 </resources>
