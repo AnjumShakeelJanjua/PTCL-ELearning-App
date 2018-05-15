@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.ProgrammingViewHolder> {
 
-    int row_index;
+    //    int row_index;
     Context context;
     private String[] data;
     private int[] images;
@@ -41,7 +41,6 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
 
         holder.videoText.setText(title);
         holder.videoImage.setImageResource(image_Id);
-
     }
 
     @Override
@@ -76,7 +75,7 @@ public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.
         public void onClick(View v) {
 
             int adapPos = getAdapterPosition();
-            if (row_index == 1 + adapPos) {
+            if (getAdapterPosition() == adapPos) {
                 this.videoLinearLayout.setBackgroundColor(Color.parseColor("#bdbdbd"));
             } else
                 this.videoLinearLayout.setBackgroundColor(Color.parseColor("#ffffff"));

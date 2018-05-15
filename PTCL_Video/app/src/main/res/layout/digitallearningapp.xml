@@ -25,7 +25,7 @@
                 android:layout_below="@id/app_actionBar"
                 android:gravity="center_horizontal"
                 android:text="@string/health_and_safety_guidelines"
-                android:textColor="#61949F"
+                android:textColor="#546e7a"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -66,8 +66,9 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/mybutton"
                     android:text="Assessment Test"
-                    android:textColor="#E9F0F1"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
+                    android:textStyle="bold"
                     app:srcCompat="@mipmap/ic_launcher_round" />
 
             </LinearLayout>
