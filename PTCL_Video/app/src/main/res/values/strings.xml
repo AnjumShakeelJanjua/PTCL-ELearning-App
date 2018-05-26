@@ -4,13 +4,13 @@
     <string name="title_activity_splash_screen">SplashScreen</string>
     <string name="health_and_safety_guidelines">Health and Safety Guidelines</string>
     <string-array name="videoTitles">
-        <item>ہائی ٹینشن ٹرانسمشن لائنز</item>
-        <item>منظور شدہ لباس</item>
-        <item>اوزار اور انسولیٹڈ سیڑھی</item>
-        <item>  کھمبوں کی حفاظتی پیش بندی</item>
-        <item>بجلی کی فراہمی کے لیے کھمبے</item>
-        <item>کھمبے پر کام کے لیے سیڑھی</item>
-        <item>ڈرائیونگ / سڑک پر حفاظت</item>
-        <item>سیڑھی کے بارے میں حفاظت</item>
+        <item> 1. ہائی ٹینشن ٹرانسمشن لائنز</item>
+        <item>2. منظور شدہ لباس</item>
+        <item>3. اوزار اور انسولیٹڈ سیڑھی</item>
+        <item>4. کھمبوں کی حفاظتی پیش بندی</item>
+        <item> 5. بجلی کی فراہمی کے لیے کھمبے</item>
+        <item>6. کھمبے پر کام کے لیے سیڑھی</item>
+        <item>7. ڈرائیونگ / سڑک پر حفاظت</item>
+        <item>8. سیڑھی کے بارے میں حفاظت</item>
     </string-array>
 </resources>
