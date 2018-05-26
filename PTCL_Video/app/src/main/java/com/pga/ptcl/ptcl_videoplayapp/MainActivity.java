@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         vid.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-                vid.stopPlayback();
+//                vid.stopPlayback();
                 if (currentVideoIndex == videoNames.size() - 1)
                     currentVideoIndex = 0;
                 else if (currentVideoIndex < videoNames.size())
@@ -94,8 +94,13 @@ public class MainActivity extends AppCompatActivity {
         }, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (currentVideoIndex < 0 && currentVideoIndex < videoNames.size())
+                if (currentVideoIndex == videoNames.size() - 1) {
+                    currentVideoIndex = 0;
+                } else if (currentVideoIndex < videoNames.size() && currentVideoIndex >= 0)
                     currentVideoIndex--;
+                if (currentVideoIndex < 0)
+                    currentVideoIndex = 0;
+
                 Uri fileThis = Uri.parse("android.resource://" + getPackageName() + "/raw/" + videoNames.get(currentVideoIndex));
                 vv.setVideoURI(fileThis);
                 vv.start();
