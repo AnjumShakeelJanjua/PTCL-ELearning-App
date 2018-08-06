@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 public class activity_VideosList extends AppCompatActivity {
 
     String[] elements;
-    private int[] listImages = {R.drawable.video1pic, R.drawable.video2pic, R.drawable.video3pic, R.drawable.video45pic, R.drawable.video45pic, R.drawable.video6pic, R.drawable.video7pic, R.drawable.video8pic};
+    private int[] listImages = {R.drawable.video1pic, R.drawable.video2pic, R.drawable.video3pic, R.drawable.video4pic, R.drawable.video5pic, R.drawable.video6pic, R.drawable.video7pic, R.drawable.video8pic};
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;

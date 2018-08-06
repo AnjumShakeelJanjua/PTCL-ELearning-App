@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ptcllogo"
-        android:label="Digital Learning Application"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/ehs_icon_launch"
+        android:label="PTCL E-Learning Application"
+        android:roundIcon="@drawable/ehs_icon_launch"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
