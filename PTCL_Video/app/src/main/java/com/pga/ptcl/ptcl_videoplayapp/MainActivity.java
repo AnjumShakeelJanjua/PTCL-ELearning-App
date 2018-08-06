@@ -61,15 +61,16 @@ public class MainActivity extends AppCompatActivity {
         vid.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
-//                vid.stopPlayback();
-                if (currentVideoIndex == videoNames.size() - 1)
+                if (currentVideoIndex == videoNames.size() - 1) {
                     currentVideoIndex = 0;
-                else if (currentVideoIndex < videoNames.size())
+                    mp.stop();
+                } else if (currentVideoIndex < videoNames.size()) {
                     currentVideoIndex++;
 
-                Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + videoNames.get(currentVideoIndex));
-                vid.setVideoURI(videoUri);
-                vid.start();
+                    Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/raw/" + videoNames.get(currentVideoIndex));
+                    vid.setVideoURI(videoUri);
+                    vid.start();
+                }
             }
         });
 
@@ -94,9 +95,7 @@ public class MainActivity extends AppCompatActivity {
         }, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (currentVideoIndex == videoNames.size() - 1) {
-                    currentVideoIndex = 0;
-                } else if (currentVideoIndex < videoNames.size() && currentVideoIndex >= 0)
+                if (currentVideoIndex < videoNames.size() && currentVideoIndex >= 0)
                     currentVideoIndex--;
                 if (currentVideoIndex < 0)
                     currentVideoIndex = 0;
